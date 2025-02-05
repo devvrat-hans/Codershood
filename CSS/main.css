@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+@import url('nav.css');
+@import url('footer.css');
+@import url('forum.css');
+@import url('index.css');
+@import url('leaderboard.css');
+@import url('login.css');
+@import url('profile.css');
+@import url('problems.css');
+@import url('signup.css');
+@import url('blogs.css');
+@import url('hero.css');
+@import url('auth-model.css');
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+    font-family: 'Fira Code', monospace;
+}
