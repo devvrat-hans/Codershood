@@ -11,6 +11,9 @@
 @import url('blogs.css');
 @import url('hero.css');
 @import url('auth-model.css');
+@import url('privacy_terms.css');
+@import url('contests.css');
+
 
 body {
     background-color: #121212;

@@ -1,8 +1,13 @@
 .problems-page {
     padding: 100px 0;
     background: #1e1e1e;
-    min-height: 100vh;
-    color: #fff;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px; 
+}
+
+.problems-table {
+    margin: 0 -2rem; 
+    padding: 0 2rem;
 }
 
 .problems-header {
@@ -140,5 +145,7 @@ td a {
 
     .problems-table {
         overflow-x: auto;
+        margin: 0 -1rem;
+        padding: 0 1rem;
     }
 }

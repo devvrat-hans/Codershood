@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contests - Codershood</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="Images/Logo_nobg_noname.png" alt="logo"></a>
+                <a href="index.html">Codershood</a>
+            </div>
+    
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Practice <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="problems.html">Problems</a></li>
+                            <li><a href="contests.html">Contests</a></li>
+                            <li><a href="leaderboard.html">Leaderboard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+                
+                <!-- Change these button classes in navbar -->
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+
+            </div>
+    
+            <button class="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Navabar Ends -->
+
+    <main class="contests-page">
+        <div class="container">
+            <div class="contests-header">
+                <h1>Coding Contests</h1>
+                
+                <div class="contests-filters">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search contests...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="upcoming">Upcoming</button>
+                        <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+                        <button class="filter-btn" data-filter="past">Past</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contests-grid">
+                <!-- Upcoming Contest Card -->
+                <div class="contest-card upcoming">
+                    <div class="contest-status">
+                        <span class="status-badge upcoming">Upcoming</span>
+                        <span class="duration"><i class="far fa-clock"></i> 2 hours</span>
+                    </div>
+                    <h3>Weekly Challenge #42</h3>
+                    <p class="contest-time">
+                        <span><i class="fas fa-calendar"></i> Feb 10, 2025</span>
+                        <span><i class="fas fa-clock"></i> 20:00 IST</span>
+                    </p>
+                    <div class="contest-details">
+                        <p><i class="fas fa-tasks"></i> 6 Problems</p>
+                        <p><i class="fas fa-users"></i> 250+ Registered</p>
+                    </div>
+                    <button class="register-btn">Register Now</button>
+                </div>
+
+                <!-- Ongoing Contest Card -->
+                <div class="contest-card ongoing">
+                    <div class="contest-status">
+                        <span class="status-badge ongoing">Live</span>
+                        <span class="duration"><i class="far fa-clock"></i> 01:23:45</span>
+                    </div>
+                    <h3>Daily Coding Sprint</h3>
+                    <p class="contest-time">
+                        <span><i class="fas fa-calendar"></i> Today</span>
+                        <span><i class="fas fa-clock"></i> Started</span>
+                    </p>
+                    <div class="contest-details">
+                        <p><i class="fas fa-tasks"></i> 4 Problems</p>
+                        <p><i class="fas fa-users"></i> 180 Participating</p>
+                    </div>
+                    <button class="join-btn">Join Now</button>
+                </div>
+
+                <!-- Past Contest Card -->
+                <div class="contest-card past">
+                    <div class="contest-status">
+                        <span class="status-badge past">Ended</span>
+                        <span class="duration"><i class="far fa-clock"></i> 2 hours</span>
+                    </div>
+                    <h3>Weekend Challenge #41</h3>
+                    <p class="contest-time">
+                        <span><i class="fas fa-calendar"></i> Feb 3, 2025</span>
+                        <span><i class="fas fa-clock"></i> Completed</span>
+                    </p>
+                    <div class="contest-details">
+                        <p><i class="fas fa-tasks"></i> 5 Problems</p>
+                        <p><i class="fas fa-users"></i> 320 Participated</p>
+                    </div>
+                    <button class="view-btn">View Editorial</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Codershood</h3>
+                    <p>Your one-stop platform for coding practice, contests, and community interaction.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/codershood" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/codershood" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/codershood" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/codershood" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="problems.html">Problems</a></li>
+                        <li><a href="contests.html">Contests</a></li>
+                        <li><a href="leaderboard.html">Leaderboard</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@codershood.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New Delhi, India</li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Codershood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script src="JS/nav.js"></script>
+    <script src="JS/contests.js"></script>
+    <script src="JS/auth.js"></script>
+</body>
+</html>

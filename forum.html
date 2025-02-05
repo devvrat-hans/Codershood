@@ -1,0 +1,195 @@
+.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Codershood</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="Images/Logo_nobg_noname.png" alt="logo"></a>
+                <a href="index.html">Codershood</a>
+            </div>
+    
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Practice <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="problems.html">Problems</a></li>
+                            <li><a href="contests.html">Contests</a></li>
+                            <li><a href="leaderboard.html">Leaderboard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+                
+                <!-- Change these button classes in navbar -->
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+
+            </div>
+    
+            <button class="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Navabar Ends -->
+
+    <main class="forum-page">
+        <div class="container">
+            <div class="forum-header">
+                <h1>Community Forum</h1>
+                
+                <div class="forum-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search discussions...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <button class="create-post-btn">
+                        <i class="fas fa-plus"></i> New Discussion
+                    </button>
+                </div>
+
+                <div class="forum-filters">
+                    <button class="filter-btn active" data-filter="all">All Topics</button>
+                    <button class="filter-btn" data-filter="general">General</button>
+                    <button class="filter-btn" data-filter="help">Help</button>
+                    <button class="filter-btn" data-filter="bugs">Bug Reports</button>
+                    <button class="filter-btn" data-filter="feature">Feature Requests</button>
+                </div>
+            </div>
+
+            <div class="forum-categories">
+                <div class="category">
+                    <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
+                    <div class="thread-list">
+                        <div class="thread pinned">
+                            <div class="thread-status">
+                                <i class="fas fa-thumbtack"></i>
+                                <span class="status-badge">Pinned</span>
+                            </div>
+                            <div class="thread-content">
+                                <h3><a href="#">Welcome to Codershood Community!</a></h3>
+                                <div class="thread-meta">
+                                    <span><i class="fas fa-user"></i> Admin</span>
+                                    <span><i class="fas fa-clock"></i> 2 days ago</span>
+                                    <span><i class="fas fa-comments"></i> 42 replies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2><i class="fas fa-code"></i> Problem Discussions</h2>
+                    <div class="thread-list">
+                        <div class="thread">
+                            <div class="thread-votes">
+                                <button class="vote-btn"><i class="fas fa-chevron-up"></i></button>
+                                <span>15</span>
+                                <button class="vote-btn"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                            <div class="thread-content">
+                                <h3><a href="#">Help with Two Sum Problem Approach</a></h3>
+                                <p class="thread-excerpt">I'm trying to optimize my solution for the Two Sum problem...</p>
+                                <div class="thread-meta">
+                                    <span><i class="fas fa-user"></i> CodeNewbie</span>
+                                    <span><i class="fas fa-clock"></i> 3 hours ago</span>
+                                    <span><i class="fas fa-comments"></i> 8 replies</span>
+                                    <span class="tags">
+                                        <span class="tag">Arrays</span>
+                                        <span class="tag">Help Wanted</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2><i class="fas fa-users"></i> General Discussion</h2>
+                    <div class="thread-list">
+                        <div class="thread">
+                            <div class="thread-votes">
+                                <button class="vote-btn"><i class="fas fa-chevron-up"></i></button>
+                                <span>23</span>
+                                <button class="vote-btn"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                            <div class="thread-content">
+                                <h3><a href="#">Best Resources for Learning Dynamic Programming</a></h3>
+                                <p class="thread-excerpt">Looking for recommendations on good DP resources...</p>
+                                <div class="thread-meta">
+                                    <span><i class="fas fa-user"></i> DPMaster</span>
+                                    <span><i class="fas fa-clock"></i> 1 day ago</span>
+                                    <span><i class="fas fa-comments"></i> 15 replies</span>
+                                    <span class="tags">
+                                        <span class="tag">Resources</span>
+                                        <span class="tag">Discussion</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Codershood</h3>
+                    <p>Your one-stop platform for coding practice, contests, and community interaction.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/codershood" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/codershood" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/codershood" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/codershood" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="problems.html">Problems</a></li>
+                        <li><a href="contests.html">Contests</a></li>
+                        <li><a href="leaderboard.html">Leaderboard</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@codershood.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New Delhi, India</li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Codershood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+    <script src="JS/forum.js"></script>
+</body>
+</html>
