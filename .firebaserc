@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "codershood"
+  },
+  "targets": {
+    "codershood": {
+      "hosting": {
+        "production": ["codershood"],
+        "staging": ["codershood-staging"]
+      }
+    }
+  }
+}
