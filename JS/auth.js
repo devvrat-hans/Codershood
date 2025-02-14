@@ -1,42 +1,75 @@
-const checkAuth = () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    return isLoggedIn;
-};
+import { auth, db } from './firebase/config.js';
+import { 
+    createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup 
+} from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
 
-const showAuthModal = () => {
-    const modal = document.createElement('div');
-    modal.className = 'auth-modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <button class="close-btn"><i class="fas fa-times"></i></button>
-            <h2>Sign In Required</h2>
-            <p>Please sign in to access this feature</p>
-            <div class="modal-buttons">
-                <a href="login.html" class="btn primary-btn">Sign In</a>
-                <button class="btn secondary-btn return-home">Return to Home</button>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(modal);
-
-    // Close button handler
-    const closeBtn = modal.querySelector('.close-btn');
-    closeBtn.addEventListener('click', () => {
-        modal.remove();
-        window.location.href = 'index.html';
-    });
-
-    // Return home button handler
-    const returnHomeBtn = modal.querySelector('.return-home');
-    returnHomeBtn.addEventListener('click', () => {
-        modal.remove();
-        window.location.href = 'index.html';
-    });
-};
-
-// Add to protected pages (problems.html, forums.html, etc.)
 document.addEventListener('DOMContentLoaded', () => {
-    if (!checkAuth()) {
-        showAuthModal();
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+    const googleBtn = document.querySelector('.google-btn');
+
+    // Google Sign In
+    if (googleBtn) {
+        googleBtn.addEventListener('click', async () => {
+            try {
+                const provider = new GoogleAuthProvider();
+                provider.addScope('profile');
+                provider.addScope('email');
+                const result = await signInWithPopup(auth, provider);
+                
+                // Create/Update user profile
+                await createUserProfile(result.user);
+                
+                // Redirect after success
+                window.location.href = '/index.html';
+            } catch (error) {
+                console.error('Google auth error:', error);
+                showError(error.message);
+            }
+        });
+    }
+
+    // Regular Email Sign In
+    if (loginForm) {
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const result = await signInWithEmailAndPassword(auth, email, password);
+                await updateUserLastLogin(result.user.uid);
+                window.location.href = '/index.html';
+            } catch (error) {
+                showError(error.message);
+            }
+        });
     }
 });
+
+async function createUserProfile(user) {
+    await setDoc(doc(db, 'users', user.uid), {
+        email: user.email,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        lastLogin: new Date(),
+        createdAt: new Date()
+    }, { merge: true });
+}
+
+function showError(message) {
+    const errorDiv = document.querySelector('.error-message') || createErrorElement();
+    errorDiv.textContent = message;
+    errorDiv.style.display = 'block';
+}
+
+function createErrorElement() {
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    document.querySelector('form').prepend(errorDiv);
+    return errorDiv;
+}

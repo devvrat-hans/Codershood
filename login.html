@@ -57,7 +57,7 @@
                         <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
                     </div>
 
-                    <button type="submit" class="btn login-btn">
+                    <button type="submit" class="btn login-btn" id="login">
                         <i class="fas fa-terminal"></i> Login
                     </button>
                 </form>
@@ -67,10 +67,10 @@
                 </div>
 
                 <div class="social-login">
-                    <button class="btn github-btn">
+                    <button class="btn github-btn" id="githubLogin">
                         <i class="fab fa-github"></i> Continue with GitHub
                     </button>
-                    <button class="btn google-btn">
+                    <button class="btn google-btn" id="googleLogin">
                         <i class="fab fa-google"></i> Continue with Google
                     </button>
                 </div>
@@ -124,6 +124,6 @@
     </footer>
     <!-- Footer Ends -->
 
-    <script type="module" src="JS/auth/login.js"></script>
+    <script type="module" src="JS/auth.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,177 @@
+.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Codershood</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navabar Starts -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="Images/Logo_nobg_noname.png" alt="logo"></a>
+                <a href="index.html">Codershood</a>
+            </div>
+    
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Practice <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="problems.html">Problems</a></li>
+                            <li><a href="contests.html">Contests</a></li>
+                            <li><a href="leaderboard.html">Leaderboard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+                
+                <!-- Change these button classes in navbar -->
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+
+            </div>
+    
+            <button class="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Navabar Ends -->
+
+
+    <main class="blog-page">
+        <div class="container">
+            <div class="blog-header">
+                <h1>Technical Blog</h1>
+                <div class="blog-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search articles...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="algorithms">Algorithms</button>
+                        <button class="filter-btn" data-category="data-structures">Data Structures</button>
+                        <button class="filter-btn" data-category="tutorials">Tutorials</button>
+                        <button class="filter-btn" data-category="interviews">Interview Prep</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Featured Post -->
+                <article class="blog-card featured">
+                    <div class="blog-image">
+                        <img src="Images/blog/featured-post.jpg" alt="Featured Post">
+                        <span class="featured-badge">Featured</span>
+                        <div class="blog-category">Algorithms</div>
+                    </div>
+                    <div class="blog-content">
+                        <h2><a href="blog/mastering-dynamic-programming.html">Mastering Dynamic Programming: A Complete Guide</a></h2>
+                        <p>Learn the fundamentals of Dynamic Programming with practical examples and step-by-step solutions...</p>
+                        <div class="blog-meta">
+                            <div class="author">
+                                <img src="Images/authors/john-doe.jpg" alt="Author">
+                                <span>John Doe</span>
+                            </div>
+                            <div class="post-info">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-calendar"></i> Feb 10, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Regular Posts -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="Images/blog/binary-trees.jpg" alt="Binary Trees">
+                        <div class="blog-category">Data Structures</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="blog/binary-trees-explained.html">Binary Trees Explained: A Beginner's Guide</a></h3>
+                        <p>Understanding the fundamentals of Binary Trees and their implementations...</p>
+                        <div class="blog-meta">
+                            <div class="author">
+                                <img src="Images/authors/jane-smith.jpg" alt="Author">
+                                <span>Jane Smith</span>
+                            </div>
+                            <div class="post-info">
+                                <span><i class="far fa-clock"></i> 4 min read</span>
+                                <span><i class="far fa-calendar"></i> Feb 8, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- Add more blog cards -->
+            </div>
+
+            <div class="pagination">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="page-numbers">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span>...</span>
+                    <a href="#">10</a>
+                </div>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Codershood</h3>
+                    <p>Your one-stop platform for coding practice, contests, and community interaction.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/codershood" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/codershood" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/codershood" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/codershood" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="problems.html">Problems</a></li>
+                        <li><a href="contests.html">Contests</a></li>
+                        <li><a href="leaderboard.html">Leaderboard</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@codershood.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New Delhi, India</li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Codershood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script src="JS/blog.js"></script>
+</body>
+</html>

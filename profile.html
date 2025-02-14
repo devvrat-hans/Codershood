@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Codershood</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navabar Starts -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="Images/Logo_nobg_noname.png" alt="logo"></a>
+                <a href="index.html">Codershood</a>
+            </div>
+    
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Practice <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="problems.html">Problems</a></li>
+                            <li><a href="contests.html">Contests</a></li>
+                            <li><a href="leaderboard.html">Leaderboard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+                
+                <!-- Change these button classes in navbar -->
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+
+            </div>
+    
+            <button class="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Navabar Ends -->
+
+
+    <main class="profile-page">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-cover"></div>
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <img src="Images/default-avatar.png" alt="Profile" id="userAvatar">
+                        <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="profile-details">
+                        <h1 id="userName">Loading...</h1>
+                        <p class="user-title">Competitive Programmer</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" id="problemsSolved">0</span>
+                                <span class="stat-label">Problems Solved</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="contestsParticipated">0</span>
+                                <span class="stat-label">Contests</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="contributions">0</span>
+                                <span class="stat-label">Contributions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-section about">
+                    <h2>About</h2>
+                    <div class="about-content" id="aboutContent">
+                        <p>No bio added yet.</p>
+                        <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                    </div>
+                </div>
+
+                <div class="profile-section coding-profiles">
+                    <h2>Coding Profiles</h2>
+                    <div class="profiles-grid">
+                        <div class="profile-card leetcode">
+                            <img src="Images/leetcode.png" alt="LeetCode">
+                            <h3>LeetCode</h3>
+                            <div class="profile-stats">
+                                <p>Rating: <span id="leetcodeRating">N/A</span></p>
+                                <p>Problems: <span id="leetcodeProblems">0</span></p>
+                            </div>
+                            <a href="#" class="connect-btn" id="connectLeetcode">
+                                <i class="fas fa-link"></i> Connect
+                            </a>
+                        </div>
+
+                        <div class="profile-card codeforces">
+                            <img src="Images/codeforces.png" alt="Codeforces">
+                            <h3>Codeforces</h3>
+                            <div class="profile-stats">
+                                <p>Rating: <span id="codeforcesRating">N/A</span></p>
+                                <p>Rank: <span id="codeforcesRank">Unrated</span></p>
+                            </div>
+                            <a href="#" class="connect-btn" id="connectCodeforces">
+                                <i class="fas fa-link"></i> Connect
+                            </a>
+                        </div>
+
+                        <div class="profile-card codechef">
+                            <img src="Images/codechef.png" alt="CodeChef">
+                            <h3>CodeChef</h3>
+                            <div class="profile-stats">
+                                <p>Rating: <span id="codechefRating">N/A</span></p>
+                                <p>Stars: <span id="codechefStars">0⭐</span></p>
+                            </div>
+                            <a href="#" class="connect-btn" id="connectCodechef">
+                                <i class="fas fa-link"></i> Connect
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section contribution-graph">
+                    <h2>Contributions</h2>
+                    <div class="heatmap" id="contributionHeatmap"></div>
+                </div>
+
+                <div class="profile-section recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-timeline" id="activityTimeline">
+                        <!-- Activity items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Codershood</h3>
+                    <p>Your one-stop platform for coding practice, contests, and community interaction.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/codershood" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/codershood" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/codershood" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/codershood" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="problems.html">Problems</a></li>
+                        <li><a href="contests.html">Contests</a></li>
+                        <li><a href="leaderboard.html">Leaderboard</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@codershood.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New Delhi, India</li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Codershood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script type="module" src="JS/profile.js"></script>
+</body>
+</html>
