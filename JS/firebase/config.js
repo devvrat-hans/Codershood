@@ -4,7 +4,7 @@ import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyD5iyQX6Lw9qOcqHNAja3GZVAanvjWPzBI",
-    authDomain: "codershood.netlify.app",
+    authDomain: "codershood19.firebaseapp.com",
     projectId: "codershood19",
     storageBucket: "codershood19.appspot.com",
     messagingSenderId: "200999819648",
